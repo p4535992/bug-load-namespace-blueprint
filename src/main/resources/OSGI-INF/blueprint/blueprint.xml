@@ -3,21 +3,21 @@
     xmlns="http://osgi.org/xmlns/blueprint/v1.0.0"
     xmlns:blueprint-schema-cxf="http://camel.apache.org/schema/cxf"
     xmlns:camel="http://camel.apache.org/schema/blueprint"
-    xmlns:cm="http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.3.0"
+    xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.3.0"
     xmlns:ctx="http://www.springframework.org/schema/context"
-    xmlns:cxf="http://camel.apache.org/schema/cxf/camel-cxf-blueprint"
-    xmlns:cxf-core="http://cxf.apache.org/schemas/blueprint/core"
+    xmlns:cxf="http://camel.apache.org/schema/blueprint/cxf"
+    xmlns:cxf-core="http://cxf.apache.org/blueprint/core"
     xmlns:cxf-security="http://cxf.apache.org/configuration/security"
     xmlns:enc="http://karaf.apache.org/xmlns/jasypt/v1.0.0"
     xmlns:ext="http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.0.0"   
-    xmlns:http="http://cxf.apache.org/schemas/configuration/http-conf"
-    xmlns:httpn="http://cxf.apache.org/schemas/configuration/http-netty-server"
-    xmlns:httpu="http://cxf.apache.org/schemas/configuration/http-undertow"
-    xmlns:jaxrs="http://cxf.apache.org/schemas/blueprint/jaxrs"
-    xmlns:jaxws="http://cxf.apache.org/schemas/blueprint/jaxws"
+    xmlns:http="http://cxf.apache.org/transports/http/configuration"
+    xmlns:httpn="http://cxf.apache.org/transports/http-netty-server/configuration"
+    xmlns:httpu="http://cxf.apache.org/transports/http-undertow/configuration"
+    xmlns:jaxrs="http://cxf.apache.org/blueprint/jaxrs"
+    xmlns:jaxws="http://cxf.apache.org/blueprint/jaxws"
     xmlns:osgi="http://www.springframework.org/schema/osgi"
     xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
-    xmlns:sec="http://cxf.apache.org/schemas/configuration/security"
+    xmlns:sec="http://cxf.apache.org/configuration/security"
     xmlns:spring-beans="http://www.springframework.org/schema/beans"
     xmlns:spring-camel-cxf="http://camel.apache.org/schema/cxf"
     xmlns:spring-security="http://www.springframework.org/schema/security"
@@ -25,21 +25,21 @@
     xsi:schemaLocation="
     http://osgi.org/xmlns/blueprint/v1.0.0 https://osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
     http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd
-    http://camel.apache.org/schema/blueprint/camel-blueprint.xsd
-    http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.3.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.3.0.xsd
+    http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd
+    http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.3.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.3.0.xsd
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
-    http://camel.apache.org/schema/cxf/camel-cxf-blueprint.xsd
-    http://cxf.apache.org/schemas/blueprint/core http://cxf.apache.org/schemas/blueprint/core.xsd              
-    http://karaf.apache.org/xmlns/jasypt/v1.0.0
+    http://camel.apache.org/schema/blueprint/cxf http://camel.apache.org/schema/cxf/camel-cxf-blueprint.xsd
+    http://cxf.apache.org/blueprint/core http://cxf.apache.org/schemas/blueprint/core.xsd              
+    http://karaf.apache.org/xmlns/jasypt/v1.0.0 http://karaf.apache.org/xmlns/jasypt/v1.0.0
     http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.0.0 http://aries.apache.org/schemas/blueprint-ext/blueprint-ext.xsd 
-    http://cxf.apache.org/schemas/configuration/http-conf http://cxf.apache.org/schemas/configuration/http-conf.xsd 
-    http://cxf.apache.org/schemas/configuration/http-netty-server http://cxf.apache.org/schemas/configuration/http-netty-server.xsd
-    http://cxf.apache.org/schemas/configuration/http-undertow http://cxf.apache.org/schemas/configuration/http-undertow.xsd
-    http://cxf.apache.org/schemas/blueprint/jaxrs http://cxf.apache.org/schemas/blueprint/jaxrs.xsd            
-    http://cxf.apache.org/schemas/blueprint/jaxws http://cxf.apache.org/schemas/blueprint/jaxws.xsd
+    http://cxf.apache.org/transports/http/configuration http://cxf.apache.org/schemas/configuration/http-conf.xsd 
+    http://cxf.apache.org/transports/http-netty-server/configuration http://cxf.apache.org/schemas/configuration/http-netty-server.xsd
+    http://cxf.apache.org/transports/http-undertow/configuration http://cxf.apache.org/schemas/configuration/http-undertow.xsd
+    http://cxf.apache.org/blueprint/jaxrs http://cxf.apache.org/schemas/blueprint/jaxrs.xsd            
+    http://cxf.apache.org/blueprint/jaxws http://cxf.apache.org/schemas/blueprint/jaxws.xsd
     http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd          
     http://www.springframework.org/schema/osgi-compendium http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd 
-    http://cxf.apache.org/schemas/configuration/security http://cxf.apache.org/schemas/configuration/security.xsd          
+    http://cxf.apache.org/configuration/security http://cxf.apache.org/schemas/configuration/security.xsd          
     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd             
     http://camel.apache.org/schema/cxf https://camel.apache.org/schema/cxf/camel-cxf.xsd
     http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
