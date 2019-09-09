@@ -60,6 +60,40 @@
     </cm:property-placeholder>
     <reference id="configAdmin" interface="org.osgi.service.cm.ConfigurationAdmin"/>
 
+    <!-- =================================== -->
+    <!-- INTERCEPTOR                         -->
+    <!-- =================================== -->
+    <!-- http://stackoverflow.com/questions/8065737/how-to-log-apache-cxf-soap-request-and-soap-response-using-log4j -->
+    <bean class="org.apache.cxf.feature.LoggingFeature" id="loggingFeature"/>
+    <bean class="org.apache.cxf.interceptor.LoggingInInterceptor" id="loggingInInterceptor">
+        <property name="prettyLogging" value="true"/>
+    </bean>
+    <bean class="org.apache.cxf.interceptor.LoggingOutInterceptor" id="loggingOutInterceptor">
+        <property name="prettyLogging" value="true"/>
+    </bean>
+    <!-- =================================== -->
+    <!-- PROVIDERS                           -->
+    <!-- =================================== -->
+    <!--
+    <bean class="org.apache.cxf.jaxrs.provider.json.JSONProvider" id="jsonProviderJaxrs">
+        <property name="dropRootElement" value="true"/>
+        <property name="ignoreNamespaces" value="true"/>
+        <property name="supportUnwrapped" value="true"/>
+    </bean>
+    -->
+    
+    <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" id="jacksonJsonProvider">
+        <!-- <property name="mapper" ref="myJsonMapper" /> -->
+    </bean>
+    <bean class="org.apache.cxf.jaxrs.provider.JAXBElementProvider" id="jaxbElementProvider">
+		<property name="singleJaxbContext" value="true" />
+	</bean>
+    <bean class="org.apache.cxf.jaxrs.model.wadl.WadlGenerator" id="wadlGeneratorProvider">
+        <property name="linkJsonToXmlSchema" value="true"/>
+        <property name="addResourceAndMethodIds" value="true" />
+    </bean>
+	<bean id="multipartProvider" class="org.apache.cxf.jaxrs.provider.MultipartProvider" />
+
     <!-- =================== -->
     <!-- HTTPS -->
     <!-- =================== -->
