@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blueprint default-activation="eager"
-    xmlns="http://osgi.org/xmlns/blueprint/v1.0.0"
+    xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
     xmlns:blueprint-schema-cxf="http://camel.apache.org/schema/cxf"
     xmlns:camel="http://camel.apache.org/schema/blueprint"
     xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.3.0"
@@ -23,7 +23,7 @@
     xmlns:spring-security="http://www.springframework.org/schema/security"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="
-    http://osgi.org/xmlns/blueprint/v1.0.0 https://osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+    http://www.osgi.org/xmlns/blueprint/v1.0.0 https://osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
     http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd
     http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd
     http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.3.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.3.0.xsd

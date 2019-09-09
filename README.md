@@ -138,6 +138,6 @@ i got stuck on the status "Grace Period" because of this error:
 
 ```
 
-Blueprint bundle bug.test.bug-load-namespace-blueprint/1.0.0.SNAPSHOT is waiting for namespace handlers [http://osgi.org/xmlns/blueprint/v1.0.0, http://camel.apache.org/schema/cxf/camel-cxf-blueprint, http://cxf.apache.org/schemas/blueprint/core, http://cxf.apache.org/schemas/configuration/security, http://cxf.apache.org/schemas/configuration/http-conf, http://camel.apache.org/schema/blueprint, http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.3.0, http://cxf.apache.org/schemas/configuration/http-undertow]
+Blueprint bundle bug.test.bug-load-namespace-blueprint/1.0.0.SNAPSHOT is waiting for namespace handlers [http://cxf.apache.org/blueprint/core, http://cxf.apache.org/transports/http/configuration, http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.3.0, http://camel.apache.org/schema/blueprint/cxf, http://cxf.apache.org/configuration/security, http://camel.apache.org/schema/blueprint, http://cxf.apache.org/transports/http-undertow/configuration]
 
 ```
